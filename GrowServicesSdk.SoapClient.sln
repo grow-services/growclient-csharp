@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowServicesSdk.SoapClient", "GrowServicesSdk.SoapClient\GrowServicesSdk.SoapClient.csproj", "{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowServicesSdk.SoapClient.TestConsole", "Samples\GrowServicesSdk.SoapClient.TestConsole\GrowServicesSdk.SoapClient.TestConsole.csproj", "{38512481-6773-4CE5-9D52-EDE18045E21F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowServicesSdk.SoapClient.DesktopClient", "Samples\GrowServicesSdk.SoapClient.DesktopClient\GrowServicesSdk.SoapClient.DesktopClient.csproj", "{2D36A0C2-9D60-410C-9E6E-032D152F19F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{5F1BE83B-F5D6-44D0-AD0E-00D4221F977F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38512481-6773-4CE5-9D52-EDE18045E21F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38512481-6773-4CE5-9D52-EDE18045E21F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38512481-6773-4CE5-9D52-EDE18045E21F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38512481-6773-4CE5-9D52-EDE18045E21F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D36A0C2-9D60-410C-9E6E-032D152F19F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D36A0C2-9D60-410C-9E6E-032D152F19F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D36A0C2-9D60-410C-9E6E-032D152F19F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D36A0C2-9D60-410C-9E6E-032D152F19F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D36A0C2-9D60-410C-9E6E-032D152F19F5} = {5F1BE83B-F5D6-44D0-AD0E-00D4221F977F}
+		{38512481-6773-4CE5-9D52-EDE18045E21F} = {5F1BE83B-F5D6-44D0-AD0E-00D4221F977F}
+	EndGlobalSection
+EndGlobal
