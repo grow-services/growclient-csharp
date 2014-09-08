@@ -14,7 +14,7 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
         {
             var client = new GrowChartServicePortClient(new Uri("http://www.grow-services.net/api/grow/soap/"))
                            {
-                               AuthenticationInformation = new Authenticate("HMS3PZFK8D7X2L17","GI1ETXNFP5")
+                               AuthenticationInformation = new Authenticate("****","*****")
                            };
 
             Pregnancy pregnancy = client.RegisterPregnancy(52, 52, 1, 1, 20141212, "1", "2", null);
