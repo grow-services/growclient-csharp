@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GrowthServicesSdk.SoapClient</RootNamespace>
+    <AssemblyName>GrowthServicesSdk.SoapClient</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="IGrowChartServicePortChannel.cs" />
+    <Compile Include="GROWChartServicePortClient.cs" />
+    <Compile Include="IGrowChartServicePort.cs" />
+    <Compile Include="Model\Authenticate.cs" />
+    <Compile Include="Model\BaseObject.cs" />
+    <Compile Include="Model\CentileData.cs" />
+    <Compile Include="Model\GrowChartImage.cs" />
+    <Compile Include="Model\GrowChartPdf.cs" />
+    <Compile Include="Model\Measurement.cs" />
+    <Compile Include="Model\Pregnancy.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Requests\AddMeasurementRequest.cs" />
+    <Compile Include="Requests\ClearDataRequest.cs" />
+    <Compile Include="Requests\GetChartImageRequest.cs" />
+    <Compile Include="Requests\GetDataRequest.cs" />
+    <Compile Include="Requests\GetPdfRequest.cs" />
+    <Compile Include="Requests\GetPregnancyRequest.cs" />
+    <Compile Include="Requests\RegisterBabyRequest.cs" />
+    <Compile Include="Requests\RegisterBirthRequest.cs" />
+    <Compile Include="Requests\RegisterPregnancyRequest.cs" />
+    <Compile Include="Requests\RemoveMeasurementRequest.cs" />
+    <Compile Include="Requests\UpdateMeasurementRequest.cs" />
+    <Compile Include="Responses\AddMeasurementResponse.cs" />
+    <Compile Include="Responses\ClearDataResponse.cs" />
+    <Compile Include="Responses\GetChartImageResponse.cs" />
+    <Compile Include="Responses\GetDataResponse.cs" />
+    <Compile Include="Responses\GetPdfResponse.cs" />
+    <Compile Include="Responses\GetPregnancyResponse.cs" />
+    <Compile Include="Responses\RegisterBabyResponse.cs" />
+    <Compile Include="Responses\RegisterBirthResponse.cs" />
+    <Compile Include="Responses\RegisterPregnancyResponse.cs" />
+    <Compile Include="Responses\RemoveMeasurementResponse.cs" />
+    <Compile Include="Responses\UpdateMeasurementResponse.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
