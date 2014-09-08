@@ -71,8 +71,6 @@ namespace GrowServicesSdk.SoapClient.DesktopClient
             parameterTableLayoutPanel.Controls.Clear();
             parameterTableLayoutPanel.RowStyles.Clear();
             parameterTableLayoutPanel.ColumnStyles.Clear();
-
-            //parameterTableLayoutPanel.RowCount = parameters.Count();
             parameterTableLayoutPanel.ColumnCount = 2;
 
             parameterTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(SizeType.AutoSize));
