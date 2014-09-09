@@ -19,7 +19,7 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
         {
             string apiKey, apiSecret;
 
-            client = new GrowChartServicePortClient(new Uri("https://www.grow-services.net/api/grow/soap/"));
+            client = new GrowChartServicePortClient(new Uri("http://www.grow-services.net/api/grow/soap/"));
 
             nodes =
                 typeof(GrowChartServicePortClient).GetMethods()
