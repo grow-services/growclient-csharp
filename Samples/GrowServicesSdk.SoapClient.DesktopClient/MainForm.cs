@@ -48,7 +48,15 @@ namespace GrowServicesSdk.SoapClient.DesktopClient
                 // set authentication header
                 this.client.AuthenticationInformation = new GrowthServicesSdk.SoapClient.Model.Authenticate(apiKeyTextBox.Text, apiSecretTextBox.Text);
                 // invoke the currently selected service method using the parameters of the form
-                var result = this.currentMethodInfo.Invoke(this.client, this.parameterCache.Select(x => Convert.ChangeType(x.Value.Text, x.Key.ParameterType)).ToArray());
+                var result = this.currentMethodInfo.Invoke(this.client, this.parameterCache.Select(
+                    x =>
+                        {
+                            if (x.Key.ParameterType.IsGenericType)
+                            {
+                                return Convert.ChangeType(x.Value.Text, x.Key.ParameterType.GetGenericArguments()[0]);
+                            }
+                            return Convert.ChangeType(x.Value.Text, x.Key.ParameterType);
+                        }).ToArray());
                 // display serialized result in the log tab
                 using (var memoryStream = new MemoryStream())
                 {
