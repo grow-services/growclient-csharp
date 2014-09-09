@@ -1,13 +1,13 @@
-namespace GrowthServicesSdk.SoapClient
+namespace GrowServicesSdk.SoapClient
 {
     using System;
     using System.ServiceModel;
     using System.ServiceModel.Channels;
     using System.Threading.Tasks;
 
-    using GrowthServicesSdk.SoapClient.Model;
-    using GrowthServicesSdk.SoapClient.Requests;
-    using GrowthServicesSdk.SoapClient.Responses;
+    using GrowServicesSdk.SoapClient.Model;
+    using GrowServicesSdk.SoapClient.Requests;
+    using GrowServicesSdk.SoapClient.Responses;
 
     public class GrowChartServicePortClient : ClientBase<IGrowChartServicePort>, IGrowChartServicePort
     {
@@ -52,7 +52,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new AddMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Date = date,
                                   Type = type,
@@ -66,7 +66,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new AddMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Date = date,
                                   Type = type,
@@ -77,14 +77,14 @@ namespace GrowthServicesSdk.SoapClient
 
         public string ClearData(string growchartid)
         {
-            var inValue = new ClearDataRequest { Authenticate = AuthenticationInformation, GrowchartId = growchartid };
+            var inValue = new ClearDataRequest { Authenticate = this.AuthenticationInformation, GrowchartId = growchartid };
             ClearDataResponse retVal = ((IGrowChartServicePort)(this)).ClearData(inValue);
             return retVal.Cleardataresult;
         }
 
         public Task<ClearDataResponse> ClearDataAsync(string growchartid)
         {
-            var inValue = new ClearDataRequest { Authenticate = AuthenticationInformation, GrowchartId = growchartid };
+            var inValue = new ClearDataRequest { Authenticate = this.AuthenticationInformation, GrowchartId = growchartid };
             return ((IGrowChartServicePort)(this)).ClearDataAsync(inValue);
         }
 
@@ -92,7 +92,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetChartImageRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Reference = reference,
                                   Height = height,
@@ -113,7 +113,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetChartImageRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Reference = reference,
                                   Height = height,
@@ -133,7 +133,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetDataRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   RequireDate = requiredate,
                                   Weight = weight
@@ -146,7 +146,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetDataRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   RequireDate = requiredate,
                                   Weight = weight
@@ -158,7 +158,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetPdfRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Firstname = firstname,
                                   Lastname = lastname,
@@ -180,7 +180,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new GetPdfRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Firstname = firstname,
                                   Lastname = lastname,
@@ -199,14 +199,14 @@ namespace GrowthServicesSdk.SoapClient
 
         public Pregnancy GetPregnancy(string growchartid)
         {
-            var inValue = new GetPregnancyRequest { Authenticate = AuthenticationInformation, GrowchartId = growchartid };
+            var inValue = new GetPregnancyRequest { Authenticate = this.AuthenticationInformation, GrowchartId = growchartid };
             GetPregnancyResponse retVal = ((IGrowChartServicePort)(this)).GetPregnancy(inValue);
             return retVal.GetPregnancyResult;
         }
 
         public Task<GetPregnancyResponse> GetPregnancyAsync(string growchartid)
         {
-            var inValue = new GetPregnancyRequest { Authenticate = AuthenticationInformation, GrowchartId = growchartid };
+            var inValue = new GetPregnancyRequest { Authenticate = this.AuthenticationInformation, GrowchartId = growchartid };
             return ((IGrowChartServicePort)(this)).GetPregnancyAsync(inValue);
         }
 
@@ -214,7 +214,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterBabyRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   BabyNr = babynr,
                                   BabyDob = babydob,
@@ -234,7 +234,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterBabyRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   BabyNr = babynr,
                                   BabyDob = babydob,
@@ -253,7 +253,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterBirthRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   BabyDob = babydob,
                                   BirthWeight = birthweight,
@@ -269,7 +269,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterBirthRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   BabyDob = babydob,
                                   BirthWeight = birthweight,
@@ -284,7 +284,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterPregnancyRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   MaternalHeight = maternalheight,
                                   MaternalWeight = maternalweight,
                                   Ethnicity = ethnicity,
@@ -302,7 +302,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RegisterPregnancyRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   MaternalHeight = maternalheight,
                                   MaternalWeight = maternalweight,
                                   Ethnicity = ethnicity,
@@ -319,7 +319,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RemoveMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   MeasurementUuid = measurementuuid
                               };
@@ -331,7 +331,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new RemoveMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   MeasurementUuid = measurementuuid
                               };
@@ -342,7 +342,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new UpdateMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Date = date,
                                   Type = type,
@@ -357,7 +357,7 @@ namespace GrowthServicesSdk.SoapClient
         {
             var inValue = new UpdateMeasurementRequest
                               {
-                                  Authenticate = AuthenticationInformation,
+                                  Authenticate = this.AuthenticationInformation,
                                   GrowchartId = growchartid,
                                   Date = date,
                                   Type = type,

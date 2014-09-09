@@ -1,10 +1,10 @@
-﻿namespace GrowthServicesSdk.SoapClient
+﻿namespace GrowServicesSdk.SoapClient
 {
     using System.ServiceModel;
     using System.Threading.Tasks;
 
-    using GrowthServicesSdk.SoapClient.Requests;
-    using GrowthServicesSdk.SoapClient.Responses;
+    using GrowServicesSdk.SoapClient.Requests;
+    using GrowServicesSdk.SoapClient.Responses;
 
     [ServiceContract(Namespace = "http://www.grow-services.net/api/grow/soap/", ConfigurationName = "ServiceReference1.GROWChartServicePort")]
     public interface IGrowChartServicePort

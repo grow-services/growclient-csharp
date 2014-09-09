@@ -1,10 +1,10 @@
-namespace GrowthServicesSdk.SoapClient.Requests
+namespace GrowServicesSdk.SoapClient.Requests
 {
     using System.ServiceModel;
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
-    using GrowthServicesSdk.SoapClient.Model;
+    using GrowServicesSdk.SoapClient.Model;
 
     [MessageContract(WrapperName = "updateMeasurement", WrapperNamespace = "http://www.grow-services.net/api/grow/soap/",
         IsWrapped = true)]

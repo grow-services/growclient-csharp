@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace GrowthServicesSdk.SoapClient.TestConsole
+﻿namespace GrowServicesSdk.SoapClient.TestConsole
 {
+    using System;
+    using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
     using System.Reflection;
+    using System.Text;
     using System.Xml.Serialization;
+
+    using GrowServicesSdk.SoapClient;
+    using GrowServicesSdk.SoapClient.Model;
 
     public class Program
     {
@@ -37,7 +39,7 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
             GetApiConfiguration(out apiKey, out apiSecret);
 
             // set authentication header for all following requests
-            client.AuthenticationInformation = new Model.Authenticate(apiKey, apiSecret);
+            client.AuthenticationInformation = new Authenticate(apiKey, apiSecret);
 
             while (true)
             {

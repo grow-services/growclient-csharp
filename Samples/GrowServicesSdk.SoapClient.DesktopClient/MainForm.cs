@@ -1,5 +1,4 @@
-﻿using GrowthServicesSdk.SoapClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -10,6 +9,8 @@ using System.Xml.Serialization;
 
 namespace GrowServicesSdk.SoapClient.DesktopClient
 {
+    using GrowServicesSdk.SoapClient.Model;
+
     public partial class MainForm : Form
     {
         private readonly GrowChartServicePortClient client;
@@ -46,7 +47,7 @@ namespace GrowServicesSdk.SoapClient.DesktopClient
             {
                 Cursor.Current = Cursors.WaitCursor;
                 // set authentication header
-                this.client.AuthenticationInformation = new GrowthServicesSdk.SoapClient.Model.Authenticate(apiKeyTextBox.Text, apiSecretTextBox.Text);
+                this.client.AuthenticationInformation = new Authenticate(apiKeyTextBox.Text, apiSecretTextBox.Text);
                 // invoke the currently selected service method using the parameters of the form
                 var result = this.currentMethodInfo.Invoke(this.client, this.parameterCache.Select(
                     x =>

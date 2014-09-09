@@ -1,4 +1,4 @@
-namespace GrowthServicesSdk.SoapClient.Model
+namespace GrowServicesSdk.SoapClient.Model
 {
     using System;
     using System.Security.Cryptography;
@@ -16,8 +16,8 @@ namespace GrowthServicesSdk.SoapClient.Model
 
         public Authenticate(string apiKey, string apiSecret)
         {
-            Licensekey = apiKey;
-            Token = ByteArrayToString(SHA1.Create().ComputeHash(Encoding.ASCII.GetBytes(apiKey + apiSecret)));
+            this.Licensekey = apiKey;
+            this.Token = ByteArrayToString(SHA1.Create().ComputeHash(Encoding.ASCII.GetBytes(apiKey + apiSecret)));
         }
 
         private string licensekeyField;

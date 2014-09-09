@@ -1,4 +1,4 @@
-namespace GrowthServicesSdk.SoapClient.Model
+namespace GrowServicesSdk.SoapClient.Model
 {
     using System.ComponentModel;
 

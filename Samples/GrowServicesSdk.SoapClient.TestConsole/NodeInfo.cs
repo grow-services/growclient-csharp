@@ -1,4 +1,4 @@
-namespace GrowthServicesSdk.SoapClient.TestConsole
+namespace GrowServicesSdk.SoapClient.TestConsole
 {
     using System.Reflection;
 

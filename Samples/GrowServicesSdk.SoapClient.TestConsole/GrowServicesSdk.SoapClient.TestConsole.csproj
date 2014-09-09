@@ -7,8 +7,8 @@
     <ProjectGuid>{38512481-6773-4CE5-9D52-EDE18045E21F}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrowthServicesSdk.SoapClient.TestConsole</RootNamespace>
-    <AssemblyName>GrowthServicesSdk.SoapClient.TestConsole</AssemblyName>
+    <RootNamespace>GrowServicesSdk.SoapClient.TestConsole</RootNamespace>
+    <AssemblyName>GrowServicesSdk.SoapClient.TestConsole</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

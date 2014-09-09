@@ -1,11 +1,11 @@
-﻿namespace GrowthServicesSdk.SoapClient.Requests
+﻿namespace GrowServicesSdk.SoapClient.Requests
 {
     using System;
     using System.ServiceModel;
     using System.Xml.Schema;
     using System.Xml.Serialization;
 
-    using GrowthServicesSdk.SoapClient.Model;
+    using GrowServicesSdk.SoapClient.Model;
 
     [MessageContract(WrapperName = "registerPregnancy", WrapperNamespace = "http://www.grow-services.net/api/grow/soap/", IsWrapped = true)]
     public partial class RegisterPregnancyRequest

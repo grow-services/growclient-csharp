@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace GrowthServicesSdk.SoapClient.TestConsole
+﻿namespace GrowServicesSdk.SoapClient.TestConsole
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class ConsoleHelper
     {
         public static bool WordWrapEnabled = false;
@@ -111,13 +111,13 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
 
         public void Dispose()
         {
-            Console.BackgroundColor = OriginalBackColor;
-            Console.ForegroundColor = OriginalForeColor;
+            Console.BackgroundColor = this.OriginalBackColor;
+            Console.ForegroundColor = this.OriginalForeColor;
 
-            ConsoleHelper.WordWrapEnabled = WordWrap;
+            ConsoleHelper.WordWrapEnabled = this.WordWrap;
 
-            if (RestorePosition)
-                Console.SetWindowPosition(OriginalLeft, OriginalTop);
+            if (this.RestorePosition)
+                Console.SetWindowPosition(this.OriginalLeft, this.OriginalTop);
         }
     }
 

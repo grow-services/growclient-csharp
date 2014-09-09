@@ -7,8 +7,8 @@
     <ProjectGuid>{E2A822BE-AA93-415A-BF09-A4B83EB0B3C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrowthServicesSdk.SoapClient</RootNamespace>
-    <AssemblyName>GrowthServicesSdk.SoapClient</AssemblyName>
+    <RootNamespace>GrowServicesSdk.SoapClient</RootNamespace>
+    <AssemblyName>GrowServicesSdk.SoapClient</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

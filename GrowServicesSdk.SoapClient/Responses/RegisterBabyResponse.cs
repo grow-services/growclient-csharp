@@ -1,4 +1,4 @@
-﻿namespace GrowthServicesSdk.SoapClient.Responses
+﻿namespace GrowServicesSdk.SoapClient.Responses
 {
     using System.ServiceModel;
     using System.Xml.Schema;
