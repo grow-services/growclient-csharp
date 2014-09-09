@@ -18,7 +18,7 @@ namespace GrowthServicesSdk.SoapClient
         }
 
         public GrowChartServicePortClient(Uri webserviceUri)
-            : base(new BasicHttpBinding(), new EndpointAddress(webserviceUri))
+            : base(webserviceUri.Scheme == "http" ? (Binding)new BasicHttpBinding() : new BasicHttpsBinding(), new EndpointAddress(webserviceUri))
         {
         }
 

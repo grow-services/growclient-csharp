@@ -19,7 +19,7 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
         {
             string apiKey, apiSecret;
 
-            client = new GrowChartServicePortClient(new Uri("http://www.grow-services.net/api/grow/soap/"));
+            client = new GrowChartServicePortClient(new Uri("https://www.grow-services.net/api/grow/soap/"));
 
             nodes =
                 typeof(GrowChartServicePortClient).GetMethods()
@@ -68,13 +68,7 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
                 // execute the service method with correct parameters
                 invoke = executeNode.Method.Invoke(
                     client,
-                    parameterCache.Select(x => {
-                            if (x.Key.ParameterType.IsGenericType)
-                            {
-                                return Convert.ChangeType(x.Value, x.Key.ParameterType.GetGenericArguments()[0]);
-                            }
-                            return Convert.ChangeType(x.Value, x.Key.ParameterType);
-                        }).ToArray());
+                    parameterCache.Select(x => Convert.ChangeType(x.Value, x.Key.ParameterType.IsGenericType ? x.Key.ParameterType.GetGenericArguments()[0] : x.Key.ParameterType)).ToArray());
             }
             catch (Exception exception)
             {
@@ -83,17 +77,13 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
             }
 
             // display result, with corresponding color
-            using (
-                ConsoleOptionChanger.CreateWithOptions(
+            using (ConsoleOptionChanger.CreateWithOptions(
                     error ? ConsoleColor.White : ConsoleColor.Black,
-                    error ? ConsoleColor.Red : ConsoleColor.Green,
-                    false))
+                    error ? ConsoleColor.Red : ConsoleColor.Green))
+            using (var memoryStream = new MemoryStream())
             {
-                using (var memoryStream = new MemoryStream())
-                {
-                    new XmlSerializer(invoke.GetType()).Serialize(memoryStream, invoke);
-                    ConsoleHelper.WriteLine(Encoding.ASCII.GetString(memoryStream.GetBuffer()));
-                }
+                new XmlSerializer(invoke.GetType()).Serialize(memoryStream, invoke);
+                ConsoleHelper.WriteLine(Encoding.ASCII.GetString(memoryStream.GetBuffer()));
             }
 
             Console.WriteLine();
@@ -137,7 +127,6 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
 
         private static void ShowSplash()
         {
-            // display header
             using (ConsoleOptionChanger.CreateWithOptions(ConsoleColor.Green))
             {
                 ConsoleHelper.WriteLine(fillChar: '*', fillTo: FillTo.Buffer);
@@ -152,7 +141,6 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
 
         private static void ShowExecutionBusy(MethodInfo info)
         {
-            // display header
             using (ConsoleOptionChanger.CreateWithOptions(ConsoleColor.Green))
             {
                 ConsoleHelper.WriteLine(fillChar: '-', fillTo: FillTo.Buffer);
@@ -167,7 +155,6 @@ namespace GrowthServicesSdk.SoapClient.TestConsole
 
         private static void ShowExecutionPreview(MethodInfo info)
         {
-            // display header
             using (ConsoleOptionChanger.CreateWithOptions(ConsoleColor.Green))
             {
                 ConsoleHelper.WriteLine(fillChar: '-', fillTo: FillTo.Buffer);
