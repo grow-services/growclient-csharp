@@ -1,6 +1,6 @@
 ﻿namespace GrowServicesSdk.SoapClient.DesktopClient
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -211,7 +211,7 @@
             this.Controls.Add(this.parameterPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.methodsPanel);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "GrowServices Test Client";
             this.parameterPanel.ResumeLayout(false);
             this.methodsPanel.ResumeLayout(false);

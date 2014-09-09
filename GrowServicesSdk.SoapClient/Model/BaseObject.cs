@@ -11,7 +11,7 @@ namespace GrowthServicesSdk.SoapClient.Model
             PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
             if ((propertyChanged != null))
             {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+                propertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }
