@@ -8,7 +8,6 @@
     using System.Text;
     using System.Xml.Serialization;
 
-    using GrowServicesSdk.SoapClient;
     using GrowServicesSdk.SoapClient.Model;
 
     public class Program

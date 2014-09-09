@@ -5,8 +5,6 @@ namespace GrowServicesSdk.SoapClient.Model
     using System.Xml.Serialization;
 
     [Serializable()]
-
-
     [XmlType(Namespace = "http://www.grow-services.net/api/grow/soap/")]
     public partial class CentileData : BaseObject
     {
